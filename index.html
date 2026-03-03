@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)file:///C:/Users/ffbar/Downloads/AKAversary_Invite.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>32 D.E.G.R.E.E.S. of AKAtude</title>
+  <link href="./index_files/css2" rel="stylesheet">
+  <style>
+    :root {
+      --salmon: #F4A8A8;
+      --salmon-dark: #D4847A;
+      --salmon-light: #FEF0F0;
+      --green: #4CAF50;
+      --green-dark: #388E3C;
+      --green-light: #E8F5E9;
+      --dark: #2C2C2C;
+      --mid: #6B6B6B;
+      --light: #AAAAAA;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: #f9f5f3;
+      color: var(--dark);
+      min-height: 100vh;
+    }
+
+    /* ── Top stripe ── */
+    .top-stripe {
+      height: 10px;
+      background: linear-gradient(to right, var(--salmon) 50%, var(--green) 50%);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 32px 24px 24px;
+      border-bottom: 1px solid #f0e8e8;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--light);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+
+    .hero-sub {
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--light);
+      text-transform: uppercase;
+    }
+
+    /* ── Section cards ── */
+    .section {
+      margin: 16px 16px 0;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      animation: fadeUp 0.5s ease both;
+    }
+
+    .section:nth-child(2) { animation-delay: 0.1s; }
+    .section:nth-child(3) { animation-delay: 0.2s; }
+    .section:nth-child(4) { animation-delay: 0.3s; }
+    .section:nth-child(5) { animation-delay: 0.4s; }
+
+    .section-header {
+      padding: 10px 20px;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: white;
+    }
+
+    .section-header.salmon { background: var(--salmon-dark); }
+    .section-header.green  { background: var(--green-dark); }
+
+    .section-body {
+      padding: 20px;
+    }
+
+    /* ── Mission quote ── */
+    .mission {
+      border-left: 3px solid var(--salmon);
+      padding-left: 16px;
+      margin-bottom: 16px;
+    }
+
+    .mission p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--dark);
+    }
+
+    .callout {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--green-dark);
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .callout-body {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--mid);
+    }
+
+    /* ── Info grid ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .info-box {
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+    }
+
+    .info-box.salmon-box {
+      background: var(--salmon-light);
+      border-top: 3px solid var(--salmon);
+    }
+
+    .info-box.green-box {
+      background: var(--green-light);
+      border-top: 3px solid var(--green);
+    }
+
+    .info-label {
+      font-size: 8px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 6px;
+    }
+
+    .info-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .info-sub {
+      font-size: 11px;
+      color: var(--mid);
+      margin-top: 3px;
+    }
+
+    /* ── Location full-width ── */
+    .location-box {
+      background: var(--salmon-light);
+      border-top: 3px solid var(--salmon);
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .location-box .info-label { margin-bottom: 8px; }
+
+    .location-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .location-address {
+      font-size: 12px;
+      color: var(--mid);
+      line-height: 1.6;
+    }
+
+    /* ── Lunch box ── */
+    .lunch-box {
+      background: var(--green-light);
+      border-top: 3px solid var(--green);
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .lunch-box .info-label { color: var(--green-dark); margin-bottom: 6px; }
+
+    .lunch-box p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: var(--dark);
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      border-radius: 50px;
+      text-align: center;
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+      margin-bottom: 10px;
+    }
+
+    .btn:active { transform: scale(0.98); opacity: 0.9; }
+
+    .btn-green {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-salmon {
+      background: var(--salmon-dark);
+      color: white;
+    }
+
+    /* ── Vegas X card ── */
+    .x-card {
+      position: relative;
+      background: #fafafa;
+      border-radius: 12px;
+      padding: 24px 20px 16px;
+      text-align: center;
+      margin-bottom: 16px;
+      overflow: hidden;
+      border: 1px solid #eee;
+    }
+
+    .x-bg {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 140px;
+      color: var(--salmon);
+      opacity: 0.12;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .x-sparkle {
+      color: var(--salmon);
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .x-tagline {
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 12px;
+    }
+
+    .x-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      color: var(--mid);
+      line-height: 1.6;
+      position: relative;
+    }
+
+    /* ── Inclusions ── */
+    .inclusions {
+      background: var(--green-light);
+      border-top: 3px solid var(--green);
+      border-radius: 10px;
+      padding: 14px 16px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .inclusion-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .inclusion-pill {
+      background: white;
+      border: 1px solid var(--green);
+      border-radius: 20px;
+      padding: 5px 12px;
+      font-size: 11px;
+      color: var(--green-dark);
+      font-weight: 500;
+    }
+
+    /* ── Cost box ── */
+    .cost-box {
+      background: var(--salmon-light);
+      border-top: 3px solid var(--salmon);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .cost-label {
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--salmon-dark);
+      margin-bottom: 8px;
+    }
+
+    .cost-amount {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--salmon-dark);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .cost-note {
+      font-size: 11px;
+      color: var(--light);
+    }
+
+    /* ── Payment box ── */
+    .payment-box {
+      background: var(--salmon-light);
+      border-top: 3px solid var(--salmon);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .payment-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 0;
+    }
+
+    .payment-icon {
+      font-size: 24px;
+    }
+
+    .payment-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 2px;
+    }
+
+    .payment-handle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--salmon-dark);
+    }
+
+    .btn-paypal {
+      background: var(--salmon);
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .btn-cashapp {
+      background: #00D632;
+      color: white;
+      margin-bottom: 0;
+    }
+
+    .payment-divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--salmon), transparent);
+      margin: 4px 0;
+    }
+
+    /* ── Closing ── */
+    .closing {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .closing-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--mid);
+      margin-bottom: 8px;
+    }
+
+    .closing-vegas {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--salmon-dark);
+      letter-spacing: 1px;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 28px 20px 40px;
+      animation: fadeUp 0.6s 0.5s ease both;
+    }
+
+    .footer-years {
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green-dark);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .footer-sisterhood {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-style: italic;
+      color: var(--salmon);
+      margin-bottom: 10px;
+    }
+
+    .stars {
+      color: var(--green);
+      font-size: 14px;
+      letter-spacing: 6px;
+    }
+
+    /* ── Bottom stripe ── */
+    .bottom-stripe {
+      height: 10px;
+      background: linear-gradient(to right, var(--green) 50%, var(--salmon) 50%);
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, #e0d8d8, transparent);
+      margin: 4px 0 16px;
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-stripe"></div>
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <p class="hero-eyebrow">Two Invitations · One Heart of Purpose</p>
+    <h1 class="hero-title">32 D.E.G.R.E.E.S.<br>of AKAtude</h1>
+    <p class="hero-sub">A Celebration of Sisterhood &amp; Service</p>
+  </div>
+
+  <!-- ══════════════════════════════ -->
+  <!-- INVITATION 1 — SERVICE EVENT  -->
+  <!-- ══════════════════════════════ -->
+  <div class="section" style="margin-top:20px;">
+    <div class="section-header salmon">✦ &nbsp; You Are Invited to Serve</div>
+    <div class="section-body">
+
+      <div class="mission">
+        <p>The Total Praise Salon exists to remind every client that they are loved, valued, and seen — inside and out. Together, we restore confidence, dignity, and hope one conversation and one act of service at a time.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <p class="callout">And We Need You to Help Make It Happen</p>
+      <p class="callout-body">You do not have to be a cosmetologist to serve. There is a place for everyone — greet guests, assist with sign-in, fold towels, track supplies, offer a listening ear, wash hair, braid or style, or simply share words of encouragement.</p>
+
+    </div>
+  </div>
+
+  <!-- Date / Time -->
+  <div class="section">
+    <div class="section-header green">Community Service Event</div>
+    <div class="section-body">
+
+      <div class="info-grid">
+        <div class="info-box green-box">
+          <p class="info-label">Date</p>
+          <p class="info-value">Saturday<br>May 23</p>
+          <p class="info-sub">2026</p>
+        </div>
+        <div class="info-box salmon-box">
+          <p class="info-label">Time</p>
+          <p class="info-value">8:30 AM</p>
+          <p class="info-sub">Until 12:30 PM</p>
+        </div>
+      </div>
+
+      <div class="location-box">
+        <p class="info-label">Location</p>
+        <p class="location-name">New Life Community Alliance</p>
+        <p class="location-address">3592 Flat Shoals Road<br>Decatur, GA 30034</p>
+      </div>
+
+      <a href="https://www.signupgenius.com/go/30E0D4CAEA62CA6FA7-62423888-community#/" class="btn btn-green">Sign Up to Volunteer</a>
+
+      <div class="lunch-box">
+        <p class="info-label">Lunch</p>
+        <p>Sorors will meet for lunch together after the service event</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ -->
+  <!-- INVITATION 2 — LAS VEGAS      -->
+  <!-- ══════════════════════════════ -->
+  <div class="section" style="margin-top:20px;">
+    <div class="section-header salmon">★ &nbsp; A Special Celebration in Las Vegas</div>
+    <div class="section-body">
+
+      <div class="x-card">
+        <div class="x-bg">X</div>
+        <p class="x-sparkle">✦</p>
+        <p class="x-tagline">A Decade of Pretty-Sophisticated Pearls</p>
+        <p class="x-body">Line Sisters — we are celebrating a decade of sisterhood. We represent the very best of our Sorority, and it is time to celebrate us.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-box salmon-box">
+          <p class="info-label">Date</p>
+          <p class="info-value">Sunday<br>July 19</p>
+          <p class="info-sub">2026</p>
+        </div>
+        <div class="info-box green-box">
+          <p class="info-label">Time</p>
+          <p class="info-value">9p –</p>
+          <p class="info-value">Midnight</p>
+        </div>
+      </div>
+
+      <div class="location-box">
+        <p class="info-label">Location</p>
+        <p class="location-name">KAMU Ultra Karaoke</p>
+        <p class="location-address">
+          Inside Grand Canal Shoppes @ Venetian Resort<br>
+          3327 S. Las Vegas Blvd Suite 2890<br>
+          Las Vegas, NV 89109
+        </p>
+      </div>
+
+      <div class="inclusions">
+        <p class="info-label" style="color:var(--green-dark);">What's Included</p>
+        <div class="inclusion-items">
+          <span class="inclusion-pill">Private Themed Suite</span>
+          <span class="inclusion-pill">Gourmet Food Platters</span>
+          <span class="inclusion-pill">VIP Tableside Service</span>
+          <span class="inclusion-pill">Gifts</span>
+        </div>
+      </div>
+
+      <div class="cost-box">
+        <p class="cost-label">Reservation Cost Per Soror</p>
+        <p class="cost-amount">$200</p>
+        <p class="cost-note">Reservations are now open — send payment to secure your spot</p>
+      </div>
+
+      <div class="payment-box">
+        <p class="info-label" style="color:var(--salmon-dark); margin-bottom:12px;">Send Payment To</p>
+        <div class="payment-row">
+          <span class="payment-icon" style="font-size:26px;">💚</span>
+          <div>
+            <p class="payment-label">PayPal</p>
+            <p class="payment-handle">@lisamullins1234</p>
+          </div>
+        </div>
+        <a href="https://www.paypal.com/paypalme/lisamullins1234" class="btn btn-paypal">Pay with PayPal</a>
+        <div class="payment-divider"></div>
+        <div class="payment-row">
+          <span class="payment-icon" style="font-size:26px;">💚</span>
+          <div>
+            <p class="payment-label">Cash App</p>
+            <p class="payment-handle">$lmullins1234</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="closing">
+        <p class="closing-main">We are sooooo excited to celebrate us!</p>
+        <p class="closing-vegas">what happens in Vegas, stays in Vegas! ✨</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <div class="footer">
+    <p class="footer-years">10 Years of</p>
+    <p class="footer-sisterhood">Sisterhood</p>
+    <p class="stars">★ ★ ★ ★ ★</p>
+  </div>
+
+  <div class="bottom-stripe"></div>
+
+
+
+</body></html>
